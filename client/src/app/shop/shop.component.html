@@ -60,19 +60,88 @@
 
 
 
-
+<!-------------------MOBILE DESIGN------------->
 
 <div class="mobile">
   <div class="container">
     <div class="row">
+
       <section class="col-12">
-        Filters
+  <h5 class="text-warning ms-3">Categories</h5>
+    <select class="form-select mb-1">
+      <option selected>All</option>
+      <option>Boards</option>
+      <option>Hats</option>
+      <option>Boots</option>
+      <option>Gloves</option>
+    </select>
+
+    <h5 class="text-warning ms-3">Brands</h5>
+    <select class="form-select mb-1">
+      <option selected>All</option>
+      <option>Angular</option>
+      <option>NetCore</option>
+      <option>VS Code</option>
+      <option>React</option>
+      <option>Typescript</option>
+      <option>Redis</option>
+    </select>
+
+    <h5 class="text-warning ms-3">Sort</h5>
+    <select class="form-select mb-4">
+      <option selected>Alphabetical</option>
+      <option>Price: Low to high</option>
+      <option>Price: High to low</option>
+    </select>
+
+    <div class="d-flex mt-2">
+      <input class="form-control" type="text" placeholder="Search">
+    </div>
+    <div class="d-flex justify-content-center mt-3">
+      <button class="btn btn-outline-primary mx-2">Search</button>
+      <button class="btn btn-outline-success">Reset</button>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center pb-2 mt-2">
+      <header>
+        <span>Showing <strong>10</strong> of <strong>18</strong> Results</span>
+      </header>
+    </div>
+
       </section>
-      <div class="row">
-        <section class="col-12">
-          Main content
+
+        <section class="display-prducts">
+
+          <div id="product" class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+
+          <div id="product" class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+
         </section>
       </div>
     </div>
   </div>
-</div>
+
