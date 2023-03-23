@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Product } from 'src/app/shared/models/products';
 
 @Component({
   selector: 'app-mobile-product-item',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./mobile-product-item.component.scss']
 })
 export class MobileProductItemComponent {
+  @Input() product: Product | undefined;
 
 }

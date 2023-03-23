@@ -37,9 +37,9 @@
           <button class="btn btn-outline-success">Reset</button>
         </div>
       </div>
-      <div class="row row-cols-md-2 row-cols-lg-3">
+      <div class="row row-cols-md-2 row-cols-xl-3">
        <div class="col" *ngFor="let product of products">
-        <app-product-item></app-product-item>
+        <app-product-item [product]="product"></app-product-item>
        </div>
       </div>
     </section>
@@ -103,7 +103,7 @@
         <section class="display-prducts">
 
           <div class="col" *ngFor="let product of products">
-            <app-mobile-product-item></app-mobile-product-item>
+            <app-mobile-product-item [product]="product"></app-mobile-product-item>
            </div>
 
 
