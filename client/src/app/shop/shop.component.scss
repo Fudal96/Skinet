@@ -4,7 +4,14 @@
   align-items: center;
 }
 
+.list-group-item:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
 
+.form-select {
+  cursor: pointer;
+}
 
 
 

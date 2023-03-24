@@ -3,10 +3,10 @@
   <div class="row">
     <section class="col-3">
 <h5 class="text-warning ms-3">Sort</h5>
-<select class="form-select mb-4">
-  <option selected>Alphabetical</option>
-  <option>Price: Low to high</option>
-  <option>Price: High to low</option>
+<select class="form-select mb-4" (change)="onSortSelected($event)">
+  <option *ngFor="let sort of sortOptions" [value]="sort.value">
+    {{sort.name}}
+  </option>
 </select>
 
       <h5 class="text-warning ms-3">Brands</h5>
@@ -57,33 +57,55 @@
 <div class="mobile">
   <div class="container">
     <div class="row">
+<!--------------
 
+  <h5 class="text-warning ms-3">Brands</h5>
+    <ul class="list-group my-3">
+      <li class="list-group-item"
+      *ngFor="let brand of brands"
+      [class.active]="brand.id === brandIdSelected"
+      [value]="brand.id"
+      (click)="onBrandSelected(brand.id)"
+      >{{brand.name}}</li>
+</ul>
+<h5 class="text-warning ms-3">Categories</h5>
+    <ul class="list-group my-3">
+      <li class="list-group-item"
+      *ngFor="let type of types"
+      [class.active]="type.id === typeIdSelected"
+      [value]="type.id"
+      (click)="onTypeSelected(type.id)"
+      >{{type.name}}</li>
+</ul>
+
+
+
+
+-->
       <section class="col-12">
   <h5 class="text-warning ms-3">Categories</h5>
-    <select class="form-select mb-1">
-      <option selected>All</option>
-      <option>Boards</option>
-      <option>Hats</option>
-      <option>Boots</option>
-      <option>Gloves</option>
+    <select class="form-select mb-1"  (change)="mobileOnTypeSelected($event)">
+      <option
+      *ngFor="let type of types"
+      [value]="type.id"
+ >
+      {{type.name}}
+      </option>
     </select>
 
     <h5 class="text-warning ms-3">Brands</h5>
-    <select class="form-select mb-1">
-      <option selected>All</option>
-      <option>Angular</option>
-      <option>NetCore</option>
-      <option>VS Code</option>
-      <option>React</option>
-      <option>Typescript</option>
-      <option>Redis</option>
+    <select class="form-select mb-1" (change)="mobileOnBrandSelected($event)">
+      <option
+      *ngFor="let brand of brands"
+      [value]="brand.id"
+      >{{brand.name}}</option>
     </select>
 
     <h5 class="text-warning ms-3">Sort</h5>
-    <select class="form-select mb-4">
-      <option selected>Alphabetical</option>
-      <option>Price: Low to high</option>
-      <option>Price: High to low</option>
+    <select class="form-select mb-4" (change)="onSortSelected($event)">
+      <option *ngFor="let sort of sortOptions" [value]="sort.value">
+        {{sort.name}}
+      </option>
     </select>
 
     <div class="d-flex mt-2">
