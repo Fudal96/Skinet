@@ -4,6 +4,7 @@ import { Brand } from '../shared/models/brand';
 import { Type } from '../shared/models/type';
 import { Pagination } from '../shared/models/pagination';
 import { Product } from '../shared/models/products';
+import { ShopParams } from '../shared/models/shopParams';
 
 @Injectable({
   providedIn: 'root'
@@ -14,12 +15,12 @@ export class ShopService {
   constructor(private http: HttpClient) { }
 
 
-  getProducts(brandId?: number, typeId?: number, sort?: string) {
+  getProducts(shopParams: ShopParams) {
     let params = new HttpParams();
 
-    if (brandId != 0) params = params.append('brandId', brandId!);
-    if (typeId != 0) params = params.append('typeId', typeId!);
-    if (sort) params = params.append('sort', sort);
+    if (shopParams.brandId > 0) params = params.append('brandId', shopParams.brandId);
+    if (shopParams.typeId > 0) params = params.append('typeId', shopParams.typeId);
+    params = params.append('sort', shopParams.sort);
 
     return this.http.get<Pagination<Product[]>>(this.baseUrl + 'products', {params});
   }
