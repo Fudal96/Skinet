@@ -36,7 +36,6 @@ constructor(private shopService: ShopService) { }
     this.shopService.getProducts(this.shopParams).subscribe({
       next: response => {
         this.products = response.data;
-        console.log(response)
         this.shopParams.pageNumber = response.pageIndex;
         this.shopParams.pageSize = response.pageSize;
         this.totalCount = response.count;
@@ -81,10 +80,16 @@ constructor(private shopService: ShopService) { }
   }
 
 
-
   onSortSelected(event: any) {
     this.shopParams.sort = event.target.value;
     this.getProducts();
+  }
+
+  onPageChanged(event: any) {
+    if (this.shopParams.pageNumber !== event.page) {
+      this.shopParams.pageNumber = event.page;
+      this.getProducts();
+    }
   }
 
 }

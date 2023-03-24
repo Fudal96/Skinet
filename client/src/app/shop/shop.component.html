@@ -51,6 +51,7 @@
             [totalItems]="totalCount"
             [itemsPerPage]="shopParams.pageSize"
             [maxSize]="10"
+            (pageChanged)="onPageChanged($event)"
             previousText="&lsaquo;"
             nextText="&rsaquo;" firstText="&laquo;"
             lastText="&raquo;">
@@ -127,6 +128,7 @@
               [totalItems]="totalCount"
               [itemsPerPage]="shopParams.pageSize"
               [maxSize]="10"
+              (pageChanged)="onPageChanged($event)"
               previousText="&lsaquo;"
               nextText="&rsaquo;" firstText="&laquo;"
               lastText="&raquo;">
