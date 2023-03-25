@@ -38,9 +38,9 @@
        ></app-paging-header>
 
         <div class="d-flex mt-2">
-          <input class="form-control" type="text" placeholder="Search">
-          <button class="btn btn-outline-primary mx-2">Search</button>
-          <button class="btn btn-outline-success">Reset</button>
+          <input (keyup.enter)="onSearch()" class="form-control" type="text" placeholder="Search" #search>
+          <button (click)="onSearch()" class="btn btn-outline-primary mx-2">Search</button>
+          <button (click)="onReset()" class="btn btn-outline-success">Reset</button>
         </div>
       </div>
       <div class="row row-cols-md-2 row-cols-xl-3 mb-4">
@@ -97,12 +97,12 @@
     </select>
 
     <div class="d-flex mt-2">
-      <input class="form-control" type="text" placeholder="Search">
+      <input class="form-control" type="text" placeholder="Search" #searchMobile>
     </div>
-    <div class="d-flex justify-content-center mt-3">
-      <button class="btn btn-outline-primary mx-2">Search</button>
-      <button class="btn btn-outline-success">Reset</button>
-    </div>
+    <!--<div class="d-flex justify-content-center mt-3">-->
+      <button (click)="onSearchMobile()" class="btn btn-outline-primary mx-2">Search</button>
+      <button (click)="onResetMobile()" class="btn btn-outline-success">Reset</button>
+    <!--</div>-->
 
     <div class="d-flex justify-content-between align-items-center pb-2 mt-2">
       <app-paging-header
@@ -128,7 +128,7 @@
         [pageSize]="shopParams.pageSize"
         (pageChanged)="onPageChanged($event)"
        ></app-pager>
-       
+
         </div>
       </div>
     </div>
