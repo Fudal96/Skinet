@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Brand } from '../shared/models/brand';
 import { Product } from '../shared/models/products';
 import { ShopParams } from '../shared/models/shopParams';
+import { SortParams } from '../shared/models/sortParams';
 import { Type } from '../shared/models/type';
 import { ShopService } from './shop.service';
 
@@ -17,6 +18,7 @@ products: Product[] = [];
 brands: Brand[] = [];
 types: Type[] = [];
 shopParams = new ShopParams();
+sortParams = new SortParams();
 sortOptions = [
   {name: 'Alphabetical', value: 'name'},
   {name: 'Price: Low to high', value: 'priceAsc'},
@@ -35,7 +37,7 @@ constructor(private shopService: ShopService) { }
   }
 
   getProducts() {
-    this.shopService.getProducts(this.shopParams).subscribe({
+    this.shopService.getProducts(this.shopParams, this.sortParams).subscribe({
       next: response => {
         this.products = response.data;
         this.shopParams.pageNumber = response.pageIndex;
@@ -87,21 +89,22 @@ constructor(private shopService: ShopService) { }
 
 
   onSortSelected(event: any) {
-    this.shopParams.sort = event.target.value;
+    this.sortParams.sort = event.target.value;
     this.getProducts();
   }
 
   onPageChanged(event: any) {
     if (this.shopParams.pageNumber !== event) {
       this.shopParams.pageNumber = event;
-      console.log(event)
       this.getProducts();
     }
   }
 
   onSearch() {
    this.shopParams.search = this.searchTerm?.nativeElement.value;
+   console.log(this.shopParams.pageNumber)
    this.shopParams.pageNumber = 1;
+   console.log(this.shopParams.pageNumber)
    this.getProducts();
   }
 
@@ -120,6 +123,10 @@ constructor(private shopService: ShopService) { }
     if (this.searchTermMobile) this.searchTermMobile.nativeElement.value = '';
     this.shopParams = new ShopParams();
     this.getProducts();
+  }
+
+  setPageOne() {
+    console.log(this.shopParams.pageNumber)
   }
 
 
