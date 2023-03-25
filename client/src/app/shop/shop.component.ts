@@ -62,22 +62,26 @@ constructor(private shopService: ShopService) { }
 
   onBrandSelected(brandId: number) {
     this.shopParams.brandId = brandId;
+    this.shopParams.pageNumber = 1;
     this.getProducts();
   }
 
   mobileOnBrandSelected(event: any) {
     this.shopParams.brandId = event.target.value;
+    this.shopParams.pageNumber = 1;
     this.getProducts();
   }
 
 
   onTypeSelected(typeId: number) {
     this.shopParams.typeId = typeId;
+    this.shopParams.pageNumber = 1;
     this.getProducts();
   }
 
   mobileOnTypeSelected(event: any) {
     this.shopParams.typeId = event.target.value;
+    this.shopParams.pageNumber = 1;
     this.getProducts();
   }
 
@@ -90,18 +94,19 @@ constructor(private shopService: ShopService) { }
   onPageChanged(event: any) {
     if (this.shopParams.pageNumber !== event) {
       this.shopParams.pageNumber = event;
+      console.log(event)
       this.getProducts();
     }
   }
 
   onSearch() {
    this.shopParams.search = this.searchTerm?.nativeElement.value;
+   this.shopParams.pageNumber = 1;
    this.getProducts();
   }
 
   onSearchMobile() {
     this.shopParams.search = this.searchTermMobile?.nativeElement.value;
-    console.log(this.shopParams.search)
     this.getProducts();
    }
 
@@ -116,5 +121,6 @@ constructor(private shopService: ShopService) { }
     this.shopParams = new ShopParams();
     this.getProducts();
   }
+
 
 }

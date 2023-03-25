@@ -1,14 +1,23 @@
-<header *ngIf="totalCount && pageNumber && pageSize && totalCount >= pageSize">
+<header *ngIf="totalCount && pageNumber && pageSize && totalCount >= pageSize && totalCount >= pageSize * pageNumber">
   <span>Showing <strong>
     {{(pageNumber -1) * pageSize +1}} -
     {{pageSize * pageNumber}}
   </strong> of <strong>{{totalCount}}</strong> Results</span>
 </header>
+
 <header *ngIf="totalCount && pageNumber && pageSize && !(totalCount >= pageSize) && totalCount != 0">
   <span>Showing <strong>
     {{totalCount}}
   </strong> of <strong>{{totalCount}}</strong> Results</span>
 </header>
+
+<header *ngIf="totalCount && pageNumber && pageSize && totalCount < pageSize * pageNumber && totalCount >= pageSize">
+  <span>Showing <strong>
+    {{(pageNumber -1) * pageSize +1}} -
+    {{totalCount}}
+  </strong> of <strong>{{totalCount}}</strong> Results</span>
+</header>
+
 <header *ngIf="totalCount === 0">
   <span><strong>No products found</strong></span>
 </header>
