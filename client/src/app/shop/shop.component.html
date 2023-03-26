@@ -53,6 +53,7 @@
        <app-pager
         [totalCount]="totalCount"
         [pageSize]="shopParams.pageSize"
+        [pageNumber]="shopParams.pageNumber"
         (pageChanged)="onPageChanged($event)"
        ></app-pager>
       </div>
@@ -60,8 +61,6 @@
   </div>
 </div>
 </div>
-
-<button (click)="setPageOne()">CLICK</button>
 
 
 <!-------------------MOBILE DESIGN------------->
@@ -126,6 +125,7 @@
           <app-pager
         [totalCount]="totalCount"
         [pageSize]="shopParams.pageSize"
+        [pageNumber]="shopParams.pageNumber"
         (pageChanged)="onPageChanged($event)"
        ></app-pager>
 

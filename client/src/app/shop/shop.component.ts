@@ -90,6 +90,7 @@ constructor(private shopService: ShopService) { }
 
   onSortSelected(event: any) {
     this.sortParams.sort = event.target.value;
+    this.shopParams.pageNumber = 1;
     this.getProducts();
   }
 
@@ -124,10 +125,5 @@ constructor(private shopService: ShopService) { }
     this.shopParams = new ShopParams();
     this.getProducts();
   }
-
-  setPageOne() {
-    console.log(this.shopParams.pageNumber)
-  }
-
 
 }
