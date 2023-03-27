@@ -4,6 +4,7 @@ import { ShopComponent } from './shop.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { MobileProductItemComponent } from './mobile-product-item/mobile-product-item.component';
 import { SharedModule } from '../shared/shared.module';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
 
@@ -11,7 +12,8 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     ShopComponent,
     ProductItemComponent,
-    MobileProductItemComponent
+    MobileProductItemComponent,
+    ProductDetailsComponent
   ],
   imports: [
     CommonModule,
