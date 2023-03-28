@@ -13,7 +13,10 @@ export class ProductDetailsComponent implements OnInit{
 product: Product | undefined;
 
 
-  constructor(private shopService: ShopService, private activatedRoute: ActivatedRoute, private bcService: BreadcrumbService) { }
+  constructor(private shopService: ShopService, private activatedRoute: ActivatedRoute, private bcService: BreadcrumbService) {
+    // we need a space for this to work here ('@productDetails', ' ')
+    this.bcService.set('@productDetails', ' ')
+  }
 
 
 
