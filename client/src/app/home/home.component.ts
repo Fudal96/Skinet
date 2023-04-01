@@ -7,7 +7,6 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit{
-  number: number | undefined;
   products: any[] = [];
   itemsPerSlide = 5;
   singleSlideOffset = false;
