@@ -1,12 +1,12 @@
-<carousel [isAnimated]="true">
+<!--<carousel [isAnimated]="true">
   <slide>
-    <img src="assets/images/hero1.jpg" alt="slide" style="display: block; width: 100%;">
+    <img class="main-slide" src="assets/images/hero1.jpg" alt="slide" style="display: block; width: 100%;">
   </slide>
   <slide>
-    <img src="assets/images/hero2.jpg" alt="slide" style="display: block; width: 100%;">
+    <img class="main-slide" src="assets/images/hero2.jpg" alt="slide" style="display: block; width: 100%;">
   </slide>
   <slide>
-    <img src="assets/images/hero3.jpg" alt="slide" style="display: block; width: 100%;">
+    <img class="main-slide" src="assets/images/hero3.jpg" alt="slide" style="display: block; width: 100%;">
   </slide>
 </carousel>
 
@@ -14,4 +14,240 @@
   <div class="d-flex justify-content-center pt-4">
     <h1>Welcome to the Shop</h1>
   </div>
-</section>
+</section> -->
+
+<!--<div class="carousel-container">
+<div class="row scroll-two-bg p-5">
+
+  <div class="offset-md-1 col-md-11 mb-2 d-flex align-items-end">
+    <h2>Best Sellers</h2>
+  </div>
+  <div class="offset-md-1 col-md-11 caru">
+    <carousel [loop]="true" [cellsToScroll]="1" [objectFit]="'cover'" [lightDOM]="true" class="carousel--slider-alignment">
+
+    <div class="carousel-cell">
+      <div class="card card-border-none">
+        <h5><span class="badge btn-custom-color">Best Seller</span> </h5>
+        <img class="card-img-top img-fluid" src="assets/images/boot-ang1.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Blue Sports Shoes</h5>
+          <p class="card-text"><b class="global-text-color mr-1"></b> <span>75.00 USD</span> </p>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-sm btn-light">SHOW MORE <i class="fa fa-arrow-right ml-1"></i> </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="carousel-cell">
+      <div class="card card-border-none">
+        <h5><span class="badge btn-custom-color">Best Seller</span> </h5>
+        <img class="card-img-top img-fluid" src="assets/images/glove-code1.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Blue Sports Shoes</h5>
+          <p class="card-text"><b class="global-text-color mr-1"></b> <s>75.00 USD</s> </p>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-sm btn-light">ADD TO CART <i class="fa fa-shopping-cart ml-1"></i> </a>
+          </div>
+          <div class="d-flex justify-content-center">
+            <a routerLink="product/details" class="btn btn-sm btn-custom-color ml-1 mt-1">BUY NOW <i class="fa fa-arrow-right ml-1"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-cell">
+      <div class="card card-border-none">
+        <h5><span class="badge btn-custom-color">Best Seller</span> </h5>
+        <img class="card-img-top img-fluid" src="assets/images/hat-core1.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Blue Sports Shoes</h5>
+          <p class="card-text"><b class="global-text-color mr-1"></b> <s>75.00 USD</s> </p>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-sm btn-light">ADD TO CART <i class="fa fa-shopping-cart ml-1"></i> </a>
+          </div>
+          <div class="d-flex justify-content-center">
+            <a routerLink="product/details" class="btn btn-sm btn-custom-color ml-1 mt-1">BUY NOW <i class="fa fa-arrow-right ml-1"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-cell">
+      <div class="card card-border-none">
+        <h5><span class="badge btn-custom-color">Best Seller</span> </h5>
+        <img class="card-img-top img-fluid" src="assets/images/sb-ang1.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Blue Sports Shoes</h5>
+          <p class="card-text"><b class="global-text-color mr-1"></b> <s>75.00 USD</s> </p>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-sm btn-light">ADD TO CART <i class="fa fa-shopping-cart ml-1"></i> </a>
+          </div>
+          <div class="d-flex justify-content-center">
+            <a routerLink="product/details" class="btn btn-sm btn-custom-color ml-1 mt-1">BUY NOW <i class="fa fa-arrow-right ml-1"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-cell">
+      <div class="card card-border-none">
+        <h5><span class="badge btn-custom-color">Best Seller</span> </h5>
+        <img class="card-img-top img-fluid" src="assets/images/boot-core1.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Blue Sports Shoes</h5>
+          <p class="card-text"><b class="global-text-color mr-1"></b> <s>75.00 USD</s> </p>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-sm btn-light">ADD TO CART <i class="fa fa-shopping-cart ml-1"></i> </a>
+          </div>
+          <div class="d-flex justify-content-center">
+            <a routerLink="product/details" class="btn btn-sm btn-custom-color ml-1 mt-1">BUY NOW <i class="fa fa-arrow-right ml-1"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-cell">
+      <div class="card card-border-none">
+        <h5><span class="badge btn-custom-color">Best Seller</span> </h5>
+        <img class="card-img-top img-fluid" src="assets/images/glove-code2.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Blue Sports Shoes</h5>
+          <p class="card-text"><b class="global-text-color mr-1"></b> <s>75.00 USD</s> </p>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-sm btn-light">ADD TO CART <i class="fa fa-shopping-cart ml-1"></i> </a>
+          </div>
+          <div class="d-flex justify-content-center">
+            <a routerLink="product/details" class="btn btn-sm btn-custom-color ml-1 mt-1">BUY NOW <i class="fa fa-arrow-right ml-1"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-cell">
+      <div class="card card-border-none">
+        <h5><span class="badge btn-custom-color">Best Seller</span> </h5>
+        <img class="card-img-top img-fluid" src="assets/images/hat-react2.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Blue Sports Shoes</h5>
+          <p class="card-text"><b class="global-text-color mr-1"></b> <s>75.00 USD</s> </p>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-sm btn-light">ADD TO CART <i class="fa fa-shopping-cart ml-1"></i> </a>
+          </div>
+          <div class="d-flex justify-content-center">
+            <a routerLink="product/details" class="btn btn-sm btn-custom-color ml-1 mt-1">BUY NOW <i class="fa fa-arrow-right ml-1"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-cell">
+      <div class="card card-border-none">
+        <h5><span class="badge btn-custom-color">Best Seller</span> </h5>
+        <img class="card-img-top img-fluid" src="assets/images/boot-redis1.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Blue Sports Shoes</h5>
+          <p class="card-text"><b class="global-text-color mr-1"></b> <s>75.00 USD</s> </p>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-sm btn-light">ADD TO CART <i class="fa fa-shopping-cart ml-1"></i> </a>
+          </div>
+          <div class="d-flex justify-content-center">
+            <a routerLink="product/details" class="btn btn-sm btn-custom-color ml-1 mt-1">BUY NOW <i class="fa fa-arrow-right ml-1"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-cell">
+      <div class="card card-border-none">
+        <h5><span class="badge btn-custom-color">Best Seller</span> </h5>
+        <img class="card-img-top img-fluid" src="assets/images/sb-core2.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Blue Sports Shoes</h5>
+          <p class="card-text"><b class="global-text-color mr-1"></b> <s>75.00 USD</s> </p>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-sm btn-light">ADD TO CART <i class="fa fa-shopping-cart ml-1"></i> </a>
+          </div>
+          <div class="d-flex justify-content-center">
+            <a routerLink="product/details" class="btn btn-sm btn-custom-color ml-1 mt-1">BUY NOW <i class="fa fa-arrow-right ml-1"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-cell">
+      <div class="card card-border-none">
+        <h5><span class="badge btn-custom-color">Best Seller</span> </h5>
+        <img class="card-img-top img-fluid" src="assets/images/sb-react1.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Blue Sports Shoes</h5>
+          <p class="card-text"><b class="global-text-color mr-1"></b> <s>75.00 USD</s> </p>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-sm btn-light">ADD TO CART <i class="fa fa-shopping-cart ml-1"></i> </a>
+          </div>
+          <div class="d-flex justify-content-center">
+            <a routerLink="product/details" class="btn btn-sm btn-custom-color ml-1 mt-1">BUY NOW <i class="fa fa-arrow-right ml-1"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-cell">
+      <div class="card card-border-none">
+        <h5><span class="badge btn-custom-color">Best Seller</span> </h5>
+        <img class="card-img-top img-fluid" src="assets/images/sb-ang2.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Blue Sports Shoes</h5>
+          <p class="card-text"><b class="global-text-color mr-1"></b> <s>75.00 USD</s> </p>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn-sm btn-light">ADD TO CART <i class="fa fa-shopping-cart ml-1"></i> </a>
+          </div>
+          <div class="d-flex justify-content-center">
+            <a routerLink="product/details" class="btn btn-sm btn-custom-color ml-1 mt-1">BUY NOW <i class="fa fa-arrow-right ml-1"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </carousel>
+  </div>
+</div>
+
+
+
+
+</div> -->
+
+
+<div class="carousel-container">
+  <div class="row scroll-two-bg p-5">
+
+    <div class="offset-md-1 col-md-11 mb-2 d-flex align-items-end">
+      <h2>Best Sellers</h2>
+    </div>
+    <div class="offset-md-1 col-md-11 caru">
+      <carousel [loop]="true" [cellsToScroll]="1" [objectFit]="'cover'" [lightDOM]="true" class="carousel--slider-alignment">
+
+      <div class="carousel-cell" *ngFor="let product of products">
+        <div class="card card-border-none">
+          <h5><span class="badge btn-custom-color">Best Seller</span> </h5>
+          <img class="card-img-top img-fluid" src="{{product.pictureUrl}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{product.name}}</h5>
+            <p class="card-text"><b class="global-text-color mr-1"></b> <span style="font-size: 24px;">{{product.price | currency}}</span> </p>
+            <div class="d-flex justify-content-center">
+              <a routerLink="/shop/{{product.id}}" class="btn btn-sm btn-light">SHOW MORE <i class="fa fa-arrow-right ml-1"></i> </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </carousel>
+  </div>
+</div>
+

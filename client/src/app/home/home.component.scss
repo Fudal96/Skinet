@@ -2,8 +2,60 @@
   height: 250px;
 }
 
-img {
+.main-slide {
   object-fit: cover;
   height: 600px;
   width: 100%;
+}
+
+
+
+
+.carousel-container {
+  margin-top: 100px;
+  overflow-x: hidden;
+
+}
+
+
+.scrll-three-bg {
+  background-color: #FCF0EC;
+}
+
+.carousel--slider-alignment {
+  height: 60vh !important;
+  //position: fixed;
+}
+
+.carousel-cell-horizontal-width {
+  width: 40vw !important;
+  background-color: white !important;
+}
+
+.carousel-card-body-bg {
+  background-color: white;
+}
+
+.card-img-top {
+  width: 30vw !important;
+  height: 30vh !important;
+}
+
+.card-img-top-horizontal {
+  width: 10vw !important;
+  height: 20vh !important;
+}
+
+.card-border-none {
+  border: none !important;
+}
+
+.badge {
+  color: white;
+  background-color: blue;
+  margin: 4px;
+}
+
+.card-title {
+  height: 80px;
 }

@@ -4,7 +4,9 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { PagingHeaderComponent } from './paging-header/paging-header.component';
 import { PagerComponent } from './pager/pager.component';
 import { FormsModule } from '@angular/forms';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
+//import { CarouselModule } from 'ngx-bootstrap/carousel';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
+import {NgxTruncateTextModule } from 'ngx-truncate-text';
 
 
 
@@ -17,14 +19,18 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     CommonModule,
     PaginationModule.forRoot(),
     FormsModule,
-    CarouselModule.forRoot()
+   // CarouselModule.forRoot(),
+    IvyCarouselModule,
+    NgxTruncateTextModule
   ],
   exports: [
     PaginationModule,
     PagingHeaderComponent,
     PagerComponent,
     FormsModule,
-    CarouselModule
+    //CarouselModule,
+    IvyCarouselModule,
+    NgxTruncateTextModule
   ]
 })
 export class SharedModule { }
